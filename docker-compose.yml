@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: project_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+  jupyter:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: jupyter_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/app
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --NotebookApp.token=''
+
+volumes:
+  pgdata:
+
+networks:
+  app-network:
+    driver: bridge

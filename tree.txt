@@ -1,0 +1,28 @@
+data-modeling-ecommerce/
+│
+├── README.md
+├── dataset/
+│   └── ecommerce_raw.csv
+│
+├── notebooks/
+│   ├── 01_modelagem_normalizada.sql
+│   ├── 02_modelagem_desnormalizada.sql
+│   ├── 03_star_schema.sql
+│   ├── 04_snowflake_schema.sql
+│
+├── diagrams/
+│   ├── normalized_model.png
+│   ├── star_schema.png
+│   └── snowflake_schema.png
+│
+├── scripts/
+│   └── load_data.sql
+│
+└── models/
+    ├── normalized/
+    ├── flat/
+    ├── star/
+    └── snowflake/
+
+
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
