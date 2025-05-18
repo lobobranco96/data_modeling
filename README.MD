@@ -8,21 +8,16 @@ Este repositório explora diferentes tipos de modelagem de dados usando um datas
 - ❄️ Snowflake Schema
 
 ## 🔧 Ferramentas usadas
-- PostgreSQL / BigQuery (ou qualquer SQL compatível)
-- SQL (DDL + DML)
+- PostgreSQL
+- SQL 
 - Diagrams.net para ERD
-- Jupyter Notebooks ou Markdown para explicações
+- Jupyter Notebooks
 
 ## 📂 Organização
 - `dataset/`: Dados brutos
 - `notebooks/`: Scripts e explicações em SQL
 - `diagrams/`: Diagramas ER e relacionais
 - `models/`: Estrutura dos modelos de dados
-
-## 💡 Como usar
-1. Clone este repositório
-2. Suba os dados em um banco local ou cloud (como BigQuery)
-3. Execute os scripts SQL na ordem sugerida nos notebooks
 
 ## 📌 Objetivo
 Demonstrar na prática as vantagens e desvantagens de cada abordagem de modelagem de dados com base em um caso realista de e-commerce.
