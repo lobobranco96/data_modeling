@@ -71,25 +71,29 @@ docker-compose up --build
 
 3. **Acesse o Jupyter Notebook:**
 
-- Abra seu navegador e acesse http://localhost:8888
+Abra seu navegador e acesse:
+```bash
+ http://localhost:8888
+```
+--- 
 
-Objetivos
+## Objetivos
+
 Demonstrar conceitos de modelagem de dados relacional.
 
 Praticar modelagem com base em diferentes estruturas (3FN, Star, Snowflake).
 
 Visualizar os impactos de performance e simplicidade nas consultas SQL.
 
+--- 
 
-
-```markdown
-# 🧠 Explicação dos Modelos de Dados
+## Explicação dos Modelos de Dados
 
 Este documento tem como objetivo explicar os diferentes tipos de modelagem de dados aplicados neste projeto.
 
 ---
 
-## ✅ Modelagem Normalizada (3FN)
+## Modelagem Normalizada (3FN)
 
 A modelagem normalizada visa evitar redundâncias e anomalias. Ela separa os dados em múltiplas tabelas relacionadas.
 
@@ -103,7 +107,7 @@ A modelagem normalizada visa evitar redundâncias e anomalias. Ela separa os dad
 
 ---
 
-## 📉 Modelagem Desnormalizada
+## Modelagem Desnormalizada
 
 A modelagem desnormalizada prioriza performance de leitura, agregando colunas que seriam separadas em tabelas distintas.
 
@@ -117,7 +121,7 @@ A modelagem desnormalizada prioriza performance de leitura, agregando colunas qu
 
 ---
 
-## ⭐ Star Schema
+## Star Schema
 
 Muito utilizado em Data Warehouses. A estrutura contém uma tabela fato central com tabelas dimensão diretamente ligadas a ela.
 
@@ -130,7 +134,7 @@ Muito utilizado em Data Warehouses. A estrutura contém uma tabela fato central 
 
 ---
 
-## ❄️ Snowflake Schema
+## Snowflake Schema
 
 Uma extensão do Star Schema, onde as dimensões também são normalizadas.
 
@@ -151,4 +155,5 @@ Uma extensão do Star Schema, onde as dimensões também são normalizadas.
 | Desnormalizado    | Dashboards rápidos, relatórios    |
 | Star Schema       | BI e Data Warehouses simples      |
 | Snowflake Schema  | BI mais complexo, multi dimensões |
+
 
