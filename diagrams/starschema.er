@@ -1,0 +1,35 @@
+[dim_clientes]
+    customer_city {label:"TEXT"}
+    customer_id {label:"TEXT"}
+    customer_state {label:"TEXT"}
+    customer_unique_id {label:"TEXT"}
+[dim_produtos]
+    product_category_name {label:"TEXT"}
+    product_description_lenght {label:"REAL"}
+    product_id {label:"TEXT"}
+    product_length_cm {label:"REAL"}
+    product_name_lenght {label:"REAL"}
+    product_photos_qty {label:"REAL"}
+    product_weight_g {label:"REAL"}
+    product_width_cm {label:"REAL"}
+[dim_tempo]
+    ano {label:"INTEGER"}
+    data_pedido {label:"TIMESTAMP"}
+    dia {label:"INTEGER"}
+    dia_semana {label:"INTEGER"}
+    mes {label:"INTEGER"}
+[dim_vendedores]
+    seller_city {label:"TEXT"}
+    seller_id {label:"TEXT"}
+    seller_state {label:"TEXT"}
+    seller_zip_code_prefix {label:"INTEGER"}
+[fato_pedidos]
+    customer_id {label:"TEXT"}
+    media_avaliacao {label:"REAL"}
+    order_id {label:"TEXT"}
+    order_purchase_timestamp {label:"TEXT"}
+    product_id {label:"TEXT"}
+    seller_id {label:"TEXT"}
+    total_frete {label:"REAL"}
+    total_pago {label:"REAL"}
+    total_valor {label:"REAL"}

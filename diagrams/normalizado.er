@@ -1,0 +1,60 @@
+[categorias_produto]
+    product_category_name {label:"TEXT"}
+    product_category_name_english {label:"TEXT"}
+[clientes]
+    customer_city {label:"TEXT"}
+    customer_id {label:"TEXT"}
+    customer_state {label:"TEXT"}
+    customer_unique_id {label:"TEXT"}
+[geolocalizacao]
+    geolocation_city {label:"TEXT"}
+    geolocation_lat {label:"REAL"}
+    geolocation_lng {label:"REAL"}
+    geolocation_state {label:"TEXT"}
+    geolocation_zip_code_prefix {label:"INTEGER"}
+[itens_pedido]
+    freight_value {label:"REAL"}
+    order_id {label:"TEXT"}
+    order_item_id {label:"INTEGER"}
+    price {label:"REAL"}
+    product_id {label:"TEXT"}
+    seller_id {label:"TEXT"}
+    shipping_limit_date {label:"TEXT"}
+[pagamentos]
+    order_id {label:"TEXT"}
+    payment_installments {label:"INTEGER"}
+    payment_sequential {label:"INTEGER"}
+    payment_type {label:"TEXT"}
+    payment_value {label:"REAL"}
+[pedidos]
+    customer_id {label:"TEXT"}
+    order_approved_at {label:"TEXT"}
+    order_delivered_carrier_date {label:"TEXT"}
+    order_delivered_customer_date {label:"TEXT"}
+    order_estimated_delivery_date {label:"TEXT"}
+    order_id {label:"TEXT"}
+    order_purchase_timestamp {label:"TEXT"}
+    order_status {label:"TEXT"}
+[produtos]
+    product_category_name {label:"TEXT"}
+    product_description_lenght {label:"REAL"}
+    product_id {label:"TEXT"}
+    product_length_cm {label:"REAL"}
+    product_length_cm_1 {label:"REAL"}
+    product_name_lenght {label:"REAL"}
+    product_photos_qty {label:"REAL"}
+    product_weight_g {label:"REAL"}
+    product_width_cm {label:"REAL"}
+[reviews_table]
+    order_id {label:"TEXT"}
+    review_answer_timestamp {label:"TEXT"}
+    review_comment_message {label:"TEXT"}
+    review_comment_title {label:"TEXT"}
+    review_creation_date {label:"TEXT"}
+    review_id {label:"TEXT"}
+    review_score {label:"INTEGER"}
+[vendedores]
+    seller_city {label:"TEXT"}
+    seller_id {label:"TEXT"}
+    seller_state {label:"TEXT"}
+    seller_zip_code_prefix {label:"INTEGER"}

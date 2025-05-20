@@ -25,33 +25,55 @@ Usamos um dataset simulado de vendas para exemplificar os modelos, aplicando con
 
 ```markdown
 data-modeling/
-│
-├── README.md
-├── dataset/
-│   └── ecommerce_raw.csv
-│
-├── notebooks/
-│   ├── 01_modelagem_normalizada.sql
-│   ├── 02_modelagem_desnormalizada.sql
-│   ├── 03_star_schema.sql
-│   ├── 04_snowflake_schema.sql
-│
-├── diagrams/
-│   ├── normalized_model.png
-│   ├── star_schema.png
-│   └── snowflake_schema.png
-│
-├── scripts/
-│   └── load_data.sql
-│
-└── models/
-│   ├── normalizado/
-│   ├── desnormalizado/
-│   ├── star_schema/
-│   └── snowflake/
-│
-└── docs/
-     └── README.MD
+├── dataset
+│   ├── olist_customers_dataset.csv
+│   ├── olist_geolocation_dataset_part1.csv
+│   ├── olist_geolocation_dataset_part2.csv
+│   ├── olist_order_items_dataset.csv
+│   ├── olist_order_payments_dataset.csv
+│   ├── olist_order_reviews_dataset.csv
+│   ├── olist_orders_dataset.csv
+│   ├── olist_products_dataset.csv
+│   ├── olist_sellers_dataset.csv
+│   └── product_category_name_translation.csv
+├── diagrams
+├── docker
+│   ├── Dockerfile
+│   └── requirements.txt
+├── docker-compose.yml
+├── docs
+│   └── README.txt
+├── models
+│   ├── desnormalizacao
+│   │   └── desnormalizacao.txt
+│   ├── normalizacao
+│   │   ├── categorias_produto.txt
+│   │   ├── clientes.txt
+│   │   ├── geolocalizacao.txt
+│   │   ├── itens_pedido.txt
+│   │   ├── pagamentos.txt
+│   │   ├── pedidos.txt
+│   │   ├── produtos.txt
+│   │   ├── review_table.txt
+│   │   └── vendedores.txt
+│   └── star_schema
+│       ├── dim_clientes.txt
+│       ├── dim_produtos.txt
+│       ├── dim_tempo.txt
+│       ├── dim_vendedores.txt
+│       └── fato_pedidos.txt
+├── notebooks
+│   ├── 01_normalizacao_3fn.ipynb
+│   ├── 02_desnormalizacao.ipynb
+│   └── 03_star_schema.ipynb
+├── README.MD
+└── tabelas_sql
+    ├── desnormalizada
+    │   └── tabela_desnormalizada.db
+    ├── normalizada
+    │   └── tabelas_normalizadas.db
+    └── star_schema
+        └── star_schema.db
 ```
 
 ---
