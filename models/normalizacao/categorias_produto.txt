@@ -1,0 +1,5 @@
+CREATE TABLE categorias_produto AS
+SELECT DISTINCT
+    product_category_name,
+    product_category_name_english
+FROM product_categories;

@@ -1,0 +1,54 @@
+CREATE TABLE desnormalizada AS
+SELECT
+    c.customer_id,
+    c.customer_unique_id,
+    c.customer_city,
+    c.customer_state,
+    p.order_id,
+    p.order_status,
+    p.order_purchase_timestamp,
+    p.order_approved_at,
+    p.order_delivered_carrier_date,
+    p.order_delivered_customer_date,
+    p.order_estimated_delivery_date,
+    oi.order_item_id,
+    oi.product_id,
+    oi.seller_id,
+    oi.shipping_limit_date,
+    oi.price,
+    oi.freight_value,
+    pr.product_category_name,
+    pr.product_name_lenght,
+    pr.product_description_lenght,
+    pr.product_photos_qty,
+    pr.product_weight_g,
+    pr.product_length_cm,
+    pr.product_width_cm,
+    s.seller_zip_code_prefix,
+    s.seller_city,
+    s.seller_state,
+    pay.payment_sequential,
+    pay.payment_type,
+    pay.payment_installments,
+    pay.payment_value,
+    rev.review_score,
+    rev.review_comment_title,
+    rev.review_comment_message,
+    rev.review_creation_date,
+    rev.review_answer_timestamp,
+    geo.geolocation_lat,
+    geo.geolocation_lng,
+    geo.geolocation_city,
+    geo.geolocation_state,
+    cat.product_category_name_english
+FROM (
+    SELECT * FROM pedidos LIMIT 5000
+) p
+JOIN clientes c ON c.customer_id = p.customer_id
+JOIN itens_pedido oi ON p.order_id = oi.order_id
+JOIN produtos pr ON oi.product_id = pr.product_id
+JOIN vendedores s ON oi.seller_id = s.seller_id
+LEFT JOIN pagamentos pay ON p.order_id = pay.order_id
+LEFT JOIN reviews_table rev ON p.order_id = rev.order_id 
+LEFT JOIN geolocalizacao geo ON c.customer_city = geo.geolocation_city  
+LEFT JOIN categorias_produto cat ON pr.product_category_name = cat.product_category_name;
