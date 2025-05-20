@@ -1,0 +1,12 @@
+[desnormalizada]
+    customer_city {label:"TEXT"}
+    customer_id {label:"TEXT"}
+    order_id {label:"TEXT"}
+    order_status {label:"TEXT"}
+    payment_type {label:"TEXT"}
+    price {label:"REAL"}
+    product_category_name {label:"TEXT"}
+    product_category_name_english {label:"TEXT"}
+    product_id {label:"TEXT"}
+    review_score {label:"INTEGER"}
+    seller_city {label:"TEXT"}
