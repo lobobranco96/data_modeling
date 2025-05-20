@@ -1,0 +1,8 @@
+CREATE TABLE dim_tempo AS
+SELECT DISTINCT
+    order_purchase_timestamp::TIMESTAMP AS data_pedido,
+    EXTRACT(YEAR FROM order_purchase_timestamp::TIMESTAMP) AS ano,
+    EXTRACT(MONTH FROM order_purchase_timestamp::TIMESTAMP) AS mes,
+    EXTRACT(DAY FROM order_purchase_timestamp::TIMESTAMP) AS dia,
+    EXTRACT(dow FROM order_purchase_timestamp::TIMESTAMP) AS dia_semana
+FROM pedidos;

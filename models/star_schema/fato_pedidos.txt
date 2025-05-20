@@ -1,0 +1,17 @@
+CREATE TABLE fato_pedidos AS
+SELECT
+    p.order_id,
+    p.customer_id,
+    oi.product_id,
+    oi.seller_id,
+    p.order_purchase_timestamp,
+    SUM(oi.price) AS total_valor,
+    SUM(oi.freight_value) AS total_frete,
+    AVG(rev.review_score) AS media_avaliacao,
+    SUM(pay.payment_value) AS total_pago
+FROM pedidos p
+JOIN itens_pedido oi ON p.order_id = oi.order_id
+LEFT JOIN reviews_table rev ON p.order_id = rev.order_id
+LEFT JOIN pagamentos pay ON p.order_id = pay.order_id
+GROUP BY
+    p.order_id, p.customer_id, oi.product_id, oi.seller_id, p.order_purchase_timestamp;
